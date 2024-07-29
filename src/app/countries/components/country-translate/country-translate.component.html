@@ -1,0 +1,13 @@
+<ng-template #loading>
+    <div class="alert alert-info text-center">
+        Por favor espere
+    </div>
+</ng-template>
+
+<h3>Traducciones</h3>
+<div class="d-flex flex-wrap" *ngIf="countryTranslations else loading">
+    <span *ngFor="let translation of countryTranslations"
+        class="badge bg-primary m-1">
+        {{ translation }}
+    </span>
+</div>

@@ -2,6 +2,8 @@
     <input class="form-control"
         type="text"
         [placeholder]=placeHolder
+        [value]="onTermValue ?? null"
         (keyup.enter)="searchTerm()"
+        (keyup)="onKeyPress(txtInput.value)"
         #txtInput>
 </div>
